@@ -10,9 +10,7 @@ describe('test all login functionalities', () => {
   });
 
   it('normal user login with email and password', () => {
-    LogingComponent.loginEmailField().type('user');
-    LogingComponent.loginPasswordField().type('user');
-    LogingComponent.loginButton().click();
+    LogingComponent.performLogin('user', 'user');
     cy.url().should('contain', '/courses');
     HeaderComponent.signoutButton().should('be.visible');
     // cy.get('[data-cy=delete-course-button]').should('not.be.visible');
@@ -21,9 +19,7 @@ describe('test all login functionalities', () => {
   /* === Test Created with Cypress Studio === */
   it('admin user should login with email and password', function() {
     /* ==== Generated with Cypress Studio ==== */
-    LogingComponent.loginEmailField().type('admin');
-    LogingComponent.loginPasswordField().type('admin');
-    LogingComponent.loginButton().click();
+    LogingComponent.performLogin('admin', 'admin');
     cy.url().should('contain', '/courses');
     HeaderComponent.signoutButton().should('be.visible');
     CourseComponent.deleteCourseButton().should('be.visible');
