@@ -6,7 +6,9 @@
     "scripts": {
         "start": "run-p server client",
         "server": "node server.js",
-        "client": "node client.js"
+        "client": "node client.js",
+        "cy:run": "cypress run --record --key 90d79426-5a78-41e3-8775-f6a7bc751bb1",
+        "test": "start-server-and-test start http://localhost:3000 cy:run"
     },
     "author": "Hatem Hatamleh",
     "license": "ISC",
@@ -23,6 +25,7 @@
     },
     "devDependencies": {
         "cypress": "^6.7.1",
-        "npm-run-all": "^4.0.1"
+        "npm-run-all": "^4.0.1",
+        "start-server-and-test": "^1.12.0"
     }
 }
