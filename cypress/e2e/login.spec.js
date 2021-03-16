@@ -9,6 +9,9 @@ describe('test all login functionalities', () => {
     cy.get('[data-cy=login-email-field]').type('user');
     cy.get('[data-cy=login-password-field]').type('user');
     cy.get('[data-cy=login-button]').click();
+    cy.url().should('contain', '/courses');
+    cy.get('[data-cy=signout-button]').should('be.visible');
+    // cy.get('[data-cy=delete-course-button]').should('not.be.visible');
   });
 
   /* === Test Created with Cypress Studio === */
@@ -19,6 +22,9 @@ describe('test all login functionalities', () => {
     cy.get('[data-cy=login-password-field]').clear();
     cy.get('[data-cy=login-password-field]').type('admin');
     cy.get('[data-cy=login-button]').click();
+    cy.url().should('contain', '/courses');
+    cy.get('[data-cy=signout-button]').should('be.visible');
+    cy.get('[data-cy=delete-course-button]').should('be.visible');
     /* ==== End Cypress Studio ==== */
   });
 })

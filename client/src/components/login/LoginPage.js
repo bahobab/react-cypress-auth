@@ -24,7 +24,7 @@ class LoginPage extends React.Component {
 
         return (
             <div>
-                {redirectToReferrer && <Redirect to={from || '/'} />}
+                {redirectToReferrer && <Redirect to={from || '/courses'} />}
                 {from && (
                     <p className="courses-header">
                         You gotta log in if you want to see the courses
