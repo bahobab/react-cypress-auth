@@ -1,8 +1,8 @@
-/// < reference types="Cypress"/>
+/// <reference types="Cypress"/>
 
-import * as LogingComponent from './components/login_component';
-import * as HeaderComponent from './components/header_component';
-import * as CourseComponent from './components/course_component';
+import * as LogingComponent from '../components/login_component';
+import * as HeaderComponent from '../components/header_component';
+import * as CourseComponent from '../components/course_component';
 import * as Utils from '../support/utils';
 
 describe('test all login functionalities', () => {
