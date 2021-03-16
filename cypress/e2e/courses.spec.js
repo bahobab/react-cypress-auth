@@ -36,6 +36,7 @@ describe('Course functionalities', () => {
 
     it('should show the list of existing courses', () => {
       CourseComponent.courseName();
+      cy.log('great');
     });
     
   });
