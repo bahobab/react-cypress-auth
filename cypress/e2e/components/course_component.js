@@ -1,0 +1,1 @@
+export const deleteCourseButton = () => cy.get('[data-cy=delete-course-button]');
